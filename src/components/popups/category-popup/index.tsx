@@ -19,6 +19,7 @@ const CategoryPopup: FunctionComponent<CategoryPopupProps> = ({
 
   const handleClick = () => {
     createCategory(categoryName);
+    setCategoryName("");
   };
 
   return (

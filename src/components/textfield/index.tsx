@@ -33,7 +33,7 @@ const Textfield: FunctionComponent<TextfieldProps> = ({
         type={isPassword ? (show ? "text" : "password") : type}
         placeholder={placeholder}
         value={value}
-        readOnly
+        readOnly={readonly}
       />
       {isPassword &&
         (show ? (

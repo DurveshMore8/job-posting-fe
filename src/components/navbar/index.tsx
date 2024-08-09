@@ -24,6 +24,10 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
       route: "/admin/job-listing",
     },
     {
+      name: "Applications",
+      route: "/admin/applications",
+    },
+    {
       name: "Logout",
       route: "/login",
     },

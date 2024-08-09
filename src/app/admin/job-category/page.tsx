@@ -5,6 +5,7 @@ import "./page.css";
 import { fetchService } from "@/services/fetch_services";
 import Button from "@/components/button";
 import CategoryPopup from "@/components/popups/category-popup";
+import { formatDate } from "@/services/date_service";
 
 interface AdminJobCategoryProps {}
 
@@ -42,7 +43,6 @@ const AdminJobCategory: FunctionComponent<AdminJobCategoryProps> = () => {
       });
 
       if (res1.code == 200) {
-        console.log(res1);
         alert(res1.data.message);
         setPopup(false);
         fetchCategory();
@@ -61,20 +61,24 @@ const AdminJobCategory: FunctionComponent<AdminJobCategoryProps> = () => {
   return (
     <main className="category">
       <Button value="Add Category" onClick={() => setPopup(true)} />
-      <div className="category-head">
-        <span>Name</span>
-        <span>Updated At</span>
-      </div>
-      <div className="category-body">
-        {category.map((data, index) => {
-          return (
-            <div key={index} className="category-body-row">
-              <span>{data.categoryName}</span>
-              <span>{data.updatedAt}</span>
-            </div>
-          );
-        })}
-      </div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {category.map((data, index) => {
+            return (
+              <tr key={index}>
+                <td>{data.categoryName}</td>
+                <td>{formatDate(data.updatedAt)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
       <CategoryPopup
         viewCategory={popup}
         setViewCategory={setPopup}

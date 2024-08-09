@@ -39,9 +39,13 @@ const AdminJobListingAdd: FunctionComponent<AdminJobListingAddProps> = () => {
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setJobData({ ...jobData, [e.target.id]: e.target.value });
+  };
+
+  const handledropdown = (e: ChangeEvent<HTMLSelectElement>) => {
+    setJobData({ ...jobData, category: e.target.value });
   };
 
   const handleAddClick = async () => {
@@ -81,12 +85,16 @@ const AdminJobListingAdd: FunctionComponent<AdminJobListingAddProps> = () => {
           type={"text"}
           onChange={handleChange}
         />
-        <select className="job-dropdown" onChange={handleChange}>
-          <option selected disabled>
+        <select className="job-dropdown" onChange={handledropdown}>
+          <option value="" selected disabled>
             Select Category
           </option>
           {category.map((data, index) => {
-            return <option key={index}>{data.categoryName}</option>;
+            return (
+              <option key={index} value={data.categoryName}>
+                {data.categoryName}
+              </option>
+            );
           })}
         </select>
         <Textfield

@@ -9,6 +9,7 @@ interface DoctorCardProps {
   name: string;
   speciality: string;
   type?: string;
+  status?: string;
 }
 
 const DoctorCard: FunctionComponent<DoctorCardProps> = ({
@@ -17,6 +18,7 @@ const DoctorCard: FunctionComponent<DoctorCardProps> = ({
   name,
   speciality,
   type = "admin",
+  status = null,
 }) => {
   return (
     <div className="card">
@@ -26,10 +28,13 @@ const DoctorCard: FunctionComponent<DoctorCardProps> = ({
       <div className="card-content">
         <h2 className="doctor-name">{name}</h2>
         <p className="specialty">{speciality}</p>
+        {status && (
+          <p className={`status ${status}`}>{status?.toUpperCase()}</p>
+        )}
         <Link
           href={
             type === "admin"
-              ? `/patient/doctors/${id}`
+              ? `/admin/applications/${id}`
               : `/candidate/job-list/${id}`
           }
         >

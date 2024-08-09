@@ -54,3 +54,17 @@
 .consult-button:hover {
   background-color: #0056b3;
 }
+
+.status {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.status.accept {
+  color: green;
+}
+
+.status.reject {
+  color: red;
+}

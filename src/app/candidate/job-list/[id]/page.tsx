@@ -55,13 +55,24 @@ const CandidateJobListId: FunctionComponent<CandidateJobListIdProps> = () => {
     });
 
     if (res.code == 200) {
+      console.log(jobData.title);
       const res1 = await fetchService({
         method: "POST",
         endpoint: "/job/apply-job",
         data: {
           jobId: id,
-          companyEmail: jobData.email,
-          candidateEmail: res.data.email,
+          coName: jobData.companyName,
+          coEmail: jobData.email,
+          coCategory: jobData.category,
+          coDescription: jobData.description,
+          coImage: jobData.companyLogo,
+          coTitle: jobData.title,
+          caName: res.data.name,
+          caEmail: res.data.email,
+          caPhone: res.data.phone,
+          caLocations: res.data.locations,
+          caDesignation: res.data.designation,
+          caSkillSets: res.data.skillSet,
         },
       });
 
