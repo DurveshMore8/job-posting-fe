@@ -2,12 +2,12 @@
 
 ## Credentials
 ### Doctor
-1. Email: johndoe@example.com
-2. Password: johndoe
+1. Email: durveshmore2003@gmail.com
+2. Password: workforce
 
 ### Patient
-1. Email: alicejohnson@example.com
-2. Password: alicejohnson
+1. Email: durveshmore62@gmail.com
+2. Password: durvesh8
 
 ## Server URL
 The server for this project is deployed on https://job-posting-be.vercel.app/
