@@ -1,0 +1,36 @@
+.category-popup {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: #00000088;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-popup.show {
+  display: flex;
+}
+
+.category-popup-section {
+  width: 400px;
+  background-color: #FFFFFF;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.category-close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.category-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

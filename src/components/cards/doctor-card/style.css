@@ -1,0 +1,56 @@
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.doctor-name {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.specialty {
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.consult-button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.consult-button:hover {
+  background-color: #0056b3;
+}

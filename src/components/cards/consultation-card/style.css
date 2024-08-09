@@ -1,0 +1,39 @@
+.consultation-card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.consultation-card-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.consultation-card-header h2 {
+  margin: 0;
+}
+
+.consultation-card-body {
+  padding: 20px;
+}
+
+.consultation-card-body p {
+  margin: 0 0 10px;
+}
+
+.consultation-card-body strong {
+  font-weight: bold;
+}
+
+.consultation-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}

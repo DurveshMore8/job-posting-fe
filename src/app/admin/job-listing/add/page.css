@@ -1,0 +1,25 @@
+.job-add {
+  padding: 32px 96px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-fields {
+  width: 50%;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.job-description {
+  margin-top: 24px;
+}
+
+.job-dropdown {
+  padding: 10px 14px;
+}
+
+.job-button {
+  margin-top: 24px;
+}

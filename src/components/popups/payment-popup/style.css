@@ -1,0 +1,99 @@
+.payment-popup {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: #00000088;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-popup.show {
+  display: flex;
+}
+
+.payment-popup-section {
+  width: 800px;
+  background-color: #FFFFFF;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.payment-close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.top-left {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-right {
+  width: 50%;
+  height: 200px;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vert-border {
+  width: 1px;
+  height: 200px;
+  background-color: grey;
+}
+
+.hori-border {
+  width: 100%;
+  height: 1px;
+  margin: 16px 0;
+  background-color: grey;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-title {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.bottom-desc {
+  font-size: 14px;
+}
+
+.bottom-checkdiv {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.bottom-check {
+  width: 14px;
+  height: 14px;
+}
+
+.bottom-text {
+  margin-left: 8px;
+  font-size: 14px;
+}

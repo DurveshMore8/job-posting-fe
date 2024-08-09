@@ -1,0 +1,35 @@
+.textfield {
+  width: 340px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.textfield-input {
+  width: 280px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.textfield-input::placeholder {
+  color: grey;
+}
+
+.textfield-icon {
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.textfield:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
